@@ -2,7 +2,6 @@ import string
 import random
 all_characters = string.ascii_lowercase
 lenght = ""
-test = [string.punctuation, string.ascii_uppercase, string.digits]
 answer = ["Yes", "No"]
 answer_d = ""
 answer_u = ""
@@ -13,11 +12,11 @@ while answer_u not in answer:
     answer_u = input("Do you want upercase in password?(Yes/No): ")
 while answer_c not in answer:
     answer_c = input("Do you want special charracters in password?(Yes/No): ")
-if answer_c == "yes":
+if answer_c.lower() == "yes":
     all_characters += (string.punctuation)
-if answer_u == "yes":
+if answer_u.lower() == "yes":
     all_characters += (string.ascii_uppercase)
-if answer_d == "yes":
+if answer_d.lower() == "yes":
     all_characters += (string.digits)
 while not lenght.isnumeric():
     lenght = input("how long?: ")
